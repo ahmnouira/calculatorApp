@@ -1,0 +1,13 @@
+<div class="calculator">
+  <input type="text" class="calculator-screen" [value]="currentNumber" disabled />
+  <div class="calculator-keys">
+
+    <button type="button" *ngFor="let op of operators" (click)="getOperation(op)" class="operator" [value]="op">{{op}}</button>
+   
+    <button type="button" *ngFor="let nb of numbers" (click)="getNumber(nb)" [value]="nb">{{nb}}</button>
+ 
+    <button type="button" (click)="getDecimal()" class="decimal" value=".">.</button>
+    <button type="button" (click)="clear()" class="all-clear" value="all-clear">AC</button>
+    <button type="button" (click)="getOperation('=')" class="equal-sign" value="=">=</button>
+  </div>
+</div>
